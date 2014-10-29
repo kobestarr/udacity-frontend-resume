@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!-- Basic Page Needs
+================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeremy Lindstrom Resume</title>
+<!-- CSS
+================================================== -->
+    <link rel="stylesheet" src="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mystyles.css">
+<!-- Fonts
+================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,900,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+<!-- Favicons
+================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<!-- JS top load
+================================================== -->
+  <script src="js/jQuery.js"></script>
+  <script src="js/helper.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+</head>
+<body>
+<!-- Navigation -->
+      <header>
+        <div class="container">
+          <nav>
+            <ul class="navigation">
+                <li><a href="#workExperience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#mapDiv">Work Life Map</a></li>
+                <li><a href="#letsConnect">Contact Me!</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+  <div id="main">
+<!--Header -->
+    <div id="header" class="center-content">
+      <ul id="topContacts" class='flex-box'></ul>
+    </div>
+
+    <div style='clear: both;'></div>
+<!--Work Experience -->
+    <div id="workExperience" class='gray'>
+      <h2>Work Experience</h2>
+    </div>
+<!--Projects -->
+    <div id="projects">
+      <h2>Projects</h2>
+    </div>
+<!--Education -->
+    <div id="education" class='gray'>
+      <h2>Education</h2>
+    </div>
+<!--Google Map -->
+    <div id="mapDiv">
+      <h2>Where I've Live &amp; Worked</h2>
+    </div>
+<!--Footer Contact Section -->
+    <div id="letsConnect" class='dark-gray'>
+      <h2 class='orange center-text'>Let's work together!</h2>
+      <ul id="footerContacts" class="flex-box">
+      </ul>
+    </div>
+  </div>
+
+<!-- JS bottom load
+================================================== -->
+  <script src="js/resumeBuilder.js"></script>
+  <script type="text/javascript">
+  if(document.getElementsByClassName("flex-item").length === 0) {
+    document.getElementById("topContacts").style.display = "none";
+  }
+  if(document.getElementsByTagName("h1").length === 0) {
+    document.getElementById("header").style.display = "none";
+  }
+  if(document.getElementsByClassName("work-entry").length === 0) {
+    document.getElementById("workExperience").style.display = "none";
+  }
+  if(document.getElementsByClassName("project-entry").length === 0) {
+    document.getElementById("projects").style.display = "none";
+  }
+  if(document.getElementsByClassName("education-entry").length === 0) {
+    document.getElementById("education").style.display = "none";
+  }
+  // if(document.getElementsByClassName("skills-entry").length === 0) {
+  //   document.getElementById("skillsChart").style.display = "none";
+  //}
+  if(document.getElementsByClassName("flex-item").length === 0) {
+    document.getElementById("letsConnect").style.display = "none";
+  }
+  if(document.getElementById("map") == undefined) {
+    document.getElementById("mapDiv").style.display = "none";
+  }
+  </script>
+</body>
