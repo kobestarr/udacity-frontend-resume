@@ -5,7 +5,7 @@ var bio = {
     "contacts" : {
     "email" : "jeremy@jeremylindstrom.com",
     "github" : "dekard",
-    "mobile" : "123-456-789",
+    "mobile" : "972-963",
     "twitter": "@jeremylindstrom",
     "location": "Flower Mound, Texas"
      },
@@ -13,7 +13,7 @@ var bio = {
     "picture" : "images/webshot.png",
     "welcomeMsg" : "Currently looking for new opportunties in Front End Web Development!"
 };
-function displayBio() {
+bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     var contactsMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -79,7 +79,7 @@ var work = {
     }
   ]
 };
-function displayWork() {
+work.display = function() {
   for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
@@ -122,7 +122,7 @@ var education = {
     }
   ]
 };
-function displayEducation() {
+education.display = function() {
     for (var school in education.schools) {
         // create new div for education
         $("#education").append(HTMLschoolStart);
@@ -171,7 +171,7 @@ var projects = {
     }
   ]
 };
-function displayProjects() {
+projects.display = function() {
     for (var project in projects.projects) {
         var displayProjectTitle = HTMLprojectTitle.replace("%data%",projects.projects[project].title);
         var displayProjectDates = HTMLprojectDates.replace("%data%",projects.projects[project].dates);
@@ -216,9 +216,13 @@ $(document).click(function (loc) {
 });
 
 //Kick off the display functions
-displayBio();
-displayWork();
-displayEducation();
-displayProjects();
+bio.display();
+work.display();
+education.display();
+projects.display();
+// displayBio();
+// displayWork();
+// displayEducation();
+// displayProjects();
 $("#mapDiv").append(googleMap);
 $('#footerContacts').append(internationalizeButton);
