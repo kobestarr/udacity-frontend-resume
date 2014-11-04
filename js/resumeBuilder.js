@@ -5,7 +5,7 @@ var bio = {
     "contacts" : {
     "email" : "jeremy@jeremylindstrom.com",
     "github" : "dekard",
-    "mobile" : "972-963",
+    "mobile" : "972-963-0890",
     "twitter": "@jeremylindstrom",
     "location": "Flower Mound, Texas"
      },
