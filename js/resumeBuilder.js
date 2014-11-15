@@ -59,7 +59,7 @@ var work = {
         "location" : "Grand Prairie, Texas",
         "dates" : "2013-2014",
         "website" : "http://www.overallpartssolutions.com",
-        "description" : "Web & Mobile (Android and iOS) software development including: Application code and database query optimization, mock-up, UI and UX design and implementation of user interfaces. Creation, design and development of new features and enhancements. Provide support with installation, configuration and ongoing usability of desktop/mobile applications, peripheral equipment and software."
+        "description" : "Web & Mobile (Android and iOS) software development including: Application code, mock-up, UI and UX design and implementation of user interfaces. Creation, design and development of new features and enhancements. Provide support with installation, configuration and ongoing usability of desktop/mobile applications, peripheral equipment and software."
     },
     {
         "employer" : "Fellowship Church",
