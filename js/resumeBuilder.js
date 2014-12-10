@@ -1,17 +1,18 @@
 // BIO SECTION
 var bio = {
-    "name": "Jeremy Lindstrom",
-    "role" : "Front End Developer",
+    "name": "Kobestarr",
+    "role" : "Front End Developer, Trainee Polymath",
     "contacts" : {
-    "email" : "jeremy@jeremylindstrom.com",
-    "github" : "dekard",
-    "mobile" : "972-963-0890",
-    "twitter": "@jeremylindstrom",
-    "location": "Flower Mound, Texas"
+    "email" : "kobestarr@gmail.com",
+    "github" : "kobestarr",
+    "mobile" : "+44 562378277",
+    "twitter": "@kobestarr",
+    "facebook": "facebook.com/kobestarrdotcom",
+    "locale": "London, England"
      },
-    "skills" : ["Design & Development", "HTML/CSS/Javascript/JQuery/JSON"],
-    "picture" : "images/webshot.png",
-    "welcomeMsg" : "Currently looking for new opportunties in Front End Web Development!"
+    "skills" : ["Trainee Ninja", "Trainee RoR Wrangler", "Placid Casual", "Learning HTML, CSS, JavaScript and jQuery, Ruby, Rails and Python - too much really!"],
+    "face" : "images/webshot.png",
+    "welcome" : "Hi there. If you are looking for a new website you may have come to the right place!"
 };
 bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -20,8 +21,9 @@ bio.display = function() {
     var contactsEmail = HTMLemail.replace("%data%", bio.contacts.email);
     var contactsGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     var contactsTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    var contactsLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    var displayWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMsg);
+    var contactsFacebook = HTMLtwitter.replace("%data%", bio.contacts.facebook);
+    var contactsLocation = HTMLlocation.replace("%data%", bio.contacts.locale);
+    var displayWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcome);
     var displayImage = HTMLbioPic.replace("%data%",bio.picture);
 
     $("#header").prepend(formattedRole);
@@ -54,35 +56,35 @@ bio.display = function() {
 var work = {
     "jobs" : [
     {
-        "employer" : "Overall Parts Solutions",
-        "title" : "Mobile Developer/Support Analyst",
-        "location" : "Grand Prairie, Texas",
-        "dates" : "2013-2014",
-        "website" : "http://www.overallpartssolutions.com",
-        "description" : "Web & Mobile (Android and iOS) software development including: Application code, mock-up, UI and UX design and implementation of user interfaces. Creation, design and development of new features and enhancements. Provide support with installation, configuration and ongoing usability of desktop/mobile applications, peripheral equipment and software."
+        "company" : "Mum",
+        "title" : "Saturday Shop Boy",
+        "location" : "Manchester, England",
+        "dates" : "1997-1998",
+        "website" : "http://www.theInternetDidNotExistThen.com",
+        "description" : "Lackey for my mum and I had to be grateful. I really was - no acting involved.Honest!"
     },
     {
-        "employer" : "Fellowship Church",
-        "title" : "Mobile Developer/Support Analyst",
-        "location" : "Grapevine, Texas",
-        "dates" : " 2011-2013",
-        "website" : "http://www.fellowshipchurch.com",
-        "description" : "Create mobile applications from start to finish including design through development for smartphones using Expression Engine, XCode & Photoshop. Design graphics and maintain content for fellowshipchurch.com, edyoung.com, fellowshiplive.com, myc3global.com, c3conference.com, and various micro-sites. Design & distribute multiple ministry-specific e-mail newsletters to approximately 40,000 subscribers. Design, update, maintain and test our iPhone/Android app with the latest audio/video sermons, daily devotionals, and promotions. Installs, troubleshoots, and maintains products and equipment. Troubleshoot, support and repair LAN connectivity issues including managed switches and wireless networks. Perform network administration including installing, configuring and supporting file and print services, email administration and user account management."
+        "company" : "The 4th Emergency Service",
+        "title" : "Car Breakdown Seller",
+        "location" : "Manchester, England",
+        "dates" : " Summers 1998-2003",
+        "website" : "http://www.theaa.com/",
+        "description" : "Answer the phones and sell breakdown cover for the good folks that would be driving round Europe and having more fun than me."
     },
     {
-        "employer" : "Cornered Rat Software",
-        "title" : "Game Artist",
-        "location" : "Bedford, Texas",
-        "dates" : "2008-2010",
-        "website" : "http://www.battlegroundeurope.com",
-        "description" : "Published Title: WWIIOL:Battleground Europe. Design and create assets that make up the WWIIOL Universe. Create various 3d models including LOD's and collision models. Create diffuse, normal, spec maps. Work with other artists to define the art style of WWIIOL."
+        "company" : "The Norwegian Peeps",
+        "title" : "Chemical Engineer Bod",
+        "location" : "Bergen, Norway",
+        "dates" : "2010-2013",
+        "website" : "http://www.KanfaAragon.com",
+        "description" : "I basically made Oil and gas things you know??"
     }
   ]
 };
 work.display = function() {
   for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
-    var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].company);
     formattedEmployer = formattedEmployer.replace("#", work.jobs[job].website);
     var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title)
     var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
@@ -99,15 +101,15 @@ work.display = function() {
 var education = {
     "schools" : [
     {
-        "name" : "Sanford Brown",
-        "location" : "Tampa, Florida",
-        "degree" : "Bachelor of Fine Arts",
-        "majors" : ["Computer Animation"],
-        "dates" : "2008",
-        "website" : "http://www.sanfordbrown.edu/",
+        "name" : "Life",
+        "location" : "Earth, The Universe",
+        "degree" : "This and that",
+        "majors" : ["Chemical Reaction Engineering"],
+        "dates" : "1998-2003",
+        "website" : "http://www.Sheffield.ac.uk/",
     }
   ],
-    "onlineCourses" : [
+    "online" : [
     {
         "title" : "Intro to HTML and CSS",
         "school" : "Udacity",
@@ -139,17 +141,17 @@ education.display = function() {
         $(".education-entry:last").append(formattedSchoolMajor); 
     }
 
-    if (education.onlineCourses.length > 0) {  
+    if (education.online.length > 0) {  
         $("#education").append(HTMLonlineClasses); 
 
-        for (var course in education.onlineCourses) {
+        for (var course in education.online) {
             $("#education").append(HTMLschoolStart);
-            var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
-            formattedOnlineTitle = formattedOnlineTitle.replace("#",education.onlineCourses[course].website);
-            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school);
+            var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",education.online[course].title);
+            formattedOnlineTitle = formattedOnlineTitle.replace("#",education.online[course].website);
+            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",education.online[course].school);
             var formattedOnlineTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
             $(".education-entry:last").append(formattedOnlineTitleSchool);
-            var formattedOnlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%",education.online[course].dates);
             $(".education-entry:last").append(formattedOnlineDates);
        }
     }
